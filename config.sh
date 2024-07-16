@@ -7,10 +7,10 @@
 #install_dir="/home/$(whoami)"
 
 # Name of the subdirectory
-#clone_dir="stable-diffusion-webui"
+clone_dir="i2i-pipeline"
 
 # Commandline arguments for webui.py, for example: export COMMANDLINE_ARGS="--medvram --opt-split-attention"
-export COMMANDLINE_ARGS="--xformers --listen --api"
+export COMMANDLINE_ARGS="--xformers --nowebui --port 6000"
 
 # python3 executable
 python_cmd="python3.10"

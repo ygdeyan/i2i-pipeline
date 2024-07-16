@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-#################################################
-# Please do not make any changes to this file,  #
-# change the variables in webui-user.sh instead #
-#################################################
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
@@ -15,11 +11,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     fi
 fi
 
-# Read variables from webui-user.sh
+# Read variables from config.sh
 # shellcheck source=/dev/null
-if [[ -f "$SCRIPT_DIR"/webui-user.sh ]]
+if [[ -f "$SCRIPT_DIR"/config.sh ]]
 then
-    source "$SCRIPT_DIR"/webui-user.sh
+    source "$SCRIPT_DIR"/config.sh
 fi
 
 # If $venv_dir is "-", then disable venv support
